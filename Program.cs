@@ -6,13 +6,13 @@ namespace Module3.ConsoleApp
 {
     internal class Program
     {
-        private const string DateFormat = "dd.MM.yyyy";
-        private const string ExDateFormat = "dd, MMMM, yyyy   ddd";
+        const string InputDateFormat = "dd.MM.yyyy";
+        const string OutputDateFormat = "dd, MMMM, yyyy   ddd";
 
         static void Main()
         {
             Console.OutputEncoding = Encoding.UTF8;
-            //Console.InputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
 
             string name = GetName();
             int age = GetAge();
@@ -53,8 +53,8 @@ namespace Module3.ConsoleApp
             bool isValid;
             do
             {
-                Console.Write($"Введите вашу дату рождения ( {DateFormat} ): ");
-                isValid = DateTime.TryParseExact(Console.ReadLine(), DateFormat, null, DateTimeStyles.None, out result);
+                Console.Write($"Введите вашу дату рождения ( {InputDateFormat} ): ");
+                isValid = DateTime.TryParseExact(Console.ReadLine(), InputDateFormat, null, DateTimeStyles.None, out result);
                 if (!isValid)
                 {
                     Console.WriteLine("Неверно указана дата рождения! Нажмите любую клавишу и попробуйте еще раз...");
