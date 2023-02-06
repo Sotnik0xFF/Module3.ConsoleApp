@@ -19,7 +19,7 @@ namespace Module3.ConsoleApp
             WriteMessage($"Ваше имя {name} и возраст {age}.");
 
             DateTime birthdate = GetBirthdate();
-            WriteMessage(string.Format("Ваша дата рождения: {0}", birthdate.ToString(ExDateFormat)));
+            WriteMessage(string.Format("Ваша дата рождения: {0}", birthdate.ToString(OutputDateFormat)));
             Console.ReadKey();
         }
 
